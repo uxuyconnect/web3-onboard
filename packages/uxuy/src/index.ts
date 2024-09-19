@@ -25,7 +25,7 @@ function uxuyWallet({
       }): Promise<WalletInterface> => {
         if (enableMobileWalletLink || reloadOnDisconnect || darkMode) {
           console.warn(
-            'darkMode, enableMobileWalletLink and reloadOnDisconnect init props are deprecated after version 2.2.7 of @web3-onboard/coinbase'
+            'darkMode, enableMobileWalletLink and reloadOnDisconnect init props are deprecated after version 2.2.7 of @web3-onboard/uxuy'
           )
         }
         const { name, icon } = appMetadata || {}
@@ -52,9 +52,11 @@ function uxuyWallet({
         )
 
         const instance = new UXUYWalletSDKConstructor({
-          appName: name || '',
-          appLogoUrl,
-          appChainIds
+          //appChainIds,
+          /*metaData: {
+            name: name || '',
+            icon: appLogoUrl
+          }*/
         })
 
         const uxuyWalletProvider = instance.ethereum
