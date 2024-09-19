@@ -33,14 +33,13 @@ function uxuyWallet({
         // according to https://github.com/wagmi-dev/wagmi/issues/383
         // @coinbase/wallet-sdk export double default fields
         // so we need to detect it to get the real constructor
-        const { default: UXUYWalletSDK } = await import(
-          '@uxuycom/web3-tg-sdk'
-        )
+        const { default: UXUYWalletSDK } = await import('@uxuycom/web3-tg-sdk')
+        console.log(UXUYWalletSDK)
         const UXUYWalletSDKConstructor = (
-          (UXUYWalletSDK as any).default
-            ? (UXUYWalletSDK as any).default
+          (UXUYWalletSDK as any).WalletTgSdk
+            ? (UXUYWalletSDK as any).WalletTgSdk
             : UXUYWalletSDK
-        ) as typeof UXUYWalletSDK
+        ) as typeof UXUYWalletSDK.WalletTgSdk
         const { isHex, toHex, createEIP1193Provider, fromHex } = await import(
           '@web3-onboard/common'
         )

@@ -13,6 +13,7 @@
   import trezorModule from '@web3-onboard/trezor'
   import walletConnectModule from '@web3-onboard/walletconnect'
   import coinbaseModule from '@web3-onboard/coinbase'
+  import uxuyModule from '@web3-onboard/uxuy'
   import magicModule from '@web3-onboard/magic'
   import web3authModule from '@web3-onboard/web3auth'
   import gas from '@web3-onboard/gas'
@@ -144,6 +145,8 @@
   })
 
   const coinbaseWallet = coinbaseModule()
+
+  const uxuyWallet = uxuyModule()
 
   const metamaskSDKWallet = metamaskSDK({
     options: {
@@ -292,6 +295,7 @@
     wallets: [
       metamaskSDKWallet,
       coinbaseWallet,
+      uxuyWallet,
       injected,
       ledger,
       trezor,

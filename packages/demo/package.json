@@ -36,6 +36,7 @@
     "@web3-onboard/cede-store": "^2.3.1",
     "@web3-onboard/core": "2.22.3",
     "@web3-onboard/coinbase": "^2.4.1",
+    "@web3-onboard/uxuy": "^2.4.1",
     "@web3-onboard/dcent": "^2.2.7",
     "@web3-onboard/enkrypt": "^2.1.1",
     "@web3-onboard/finoaconnect": "2.0.0",

@@ -4602,6 +4602,15 @@
     cbor-web "8.1.0"
     node-forge "1.3.1"
 
+"@uxuycom/web3-tg-sdk@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@uxuycom/web3-tg-sdk/-/web3-tg-sdk-0.0.5.tgz#577638ee115856154530bf0505615de3474bd9c7"
+  integrity sha512-P6nXQATFX+YHSltJJrs2ZiVjYfCg5dnh1xyQpnJ+EgerkUBK9lmIX6vtaFNNS/I6fvl+HVt5zElGjDYw6g/OGw==
+  dependencies:
+    axios "^1.5.0"
+    buffer "^6.0.3"
+    eventemitter3 "^5.0.1"
+
 "@venly/connect@^2.4.1":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@venly/connect/-/connect-2.5.0.tgz#445859aba69dcbeddad99e1cad22b12c34908393"
