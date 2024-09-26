@@ -1,48 +1,51 @@
-# @web3-onboard/coinbase
+# @web3-onboard/Uxuy
 
-## Wallet module for connecting Coinbase Wallet SDK to web3-onboard
+## Wallet module for connecting Uxuy Wallet SDK to web3-onboard
 
-See [Coinbase Wallet Developer Docs](https://docs.cloud.coinbase.com/wallet-sdk/docs)
+See [Uxuy Wallet Developer Docs](https://docs.uxuy.com/uxuy-connect/guide/)
 
 ### Install
 
-`npm i @web3-onboard/coinbase`
+`npm i @web3-onboard/uxuy`
 
 ## Options
 
 ```typescript
-type CoinbaseWalletOptions = {
-  /** @deprecated Deprecated after version 2.2.7 of @web3-onboard/coinbase Use dark theme */
-  darkMode?: boolean
-  /** @deprecated Deprecated after version 2.2.7 of @web3-onboard/coinbase whether to connect mobile web app via WalletLink, defaults to false */
-  enableMobileWalletLink?: boolean
-  /** @deprecated Deprecated after version 2.2.7 of @web3-onboard/coinbase whether or not to reload dapp automatically after disconnect, defaults to true */
-  reloadOnDisconnect?: boolean
-  /** Type of Coinbase wallets to support - options : 'all' | 'smartWalletOnly' | 'eoaOnly' - Default to `all` */
-  supportedWalletType?: 'all' | 'smartWalletOnly' | 'eoaOnly'
+interface UxuyWalletParameters {
+  debug?: boolean
+  bridge?: string
+  connect?: string
+  connect_direct_link?: string
+  injected?: boolean
+  request_timeout?: number
+  metaData?: {
+    hostname: string
+    icon?: string
+    name?: string
+    url?: string //
+    description?: string
+    direct_link?: string
+  }
 }
 ```
 
-## Smart Wallet
-
-Starting at `@web3-onboard/coinbase` version 2.3.0 smart wallet support has been added. A smart wallet lives in your browser, no extensions or app installs needed. Use passkeys for signing, with enterprise-grade security without complex seed phrases. One wallet, one address, works universally across major L2s and onchain apps. [More info on Coinbase smart wallets](https://www.coinbase.com/wallet/smart-wallet).
 
 ## Usage
 
 ```typescript
 import Onboard from '@web3-onboard/core'
-import coinbaseWalletModule from '@web3-onboard/coinbase'
+import UxuyWalletModule from '@uxuyalpha/web3-onboard-uxuy'
 
 // initialize the module with options
-const coinbaseWalletSdk = coinbaseWalletModule()
+const UxuyWalletSdk = UxuyWalletModule()
 
 // can also initialize with no options...
-// const coinbaseWalletSdk = coinbaseWalletModule()
+// const UxuyWalletSdk = UxuyWalletModule()
 
 const onboard = Onboard({
   // ... other Onboard options
   wallets: [
-    coinbaseWalletSdk
+    UxuyWalletSdk
     //... other wallets
   ]
 })
